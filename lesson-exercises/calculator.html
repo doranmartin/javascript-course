@@ -8,22 +8,26 @@
   <body>
     <p>
       <button onclick="
-      calculation += '1';
+        calculation += '1';
+        localStorage.setItem('calculation', calculation);
     ">
       1
     </button>
     <button onclick="
-    calculation += '2';
+      calculation += '2';
+      localStorage.setItem('calculation', calculation);
     ">      
       2
     </button>
     <button onclick="
       calculation += '3';
+      localStorage.setItem('calculation', calculation);
     ">      
       3
     </button>
     <button onclick="
       calculation += ' + ';
+      localStorage.setItem('calculation', calculation);
     ">
       +
     </button>
@@ -31,22 +35,26 @@
 
     <p>
       <button onclick="
-      calculation += '4';
+        calculation += '4';
+        localStorage.setItem('calculation', calculation);
     ">
       4
     </button>
     <button onclick="
-    calculation += '5';
+      calculation += '5';
+      localStorage.setItem('calculation', calculation);
     ">      
       5
     </button>
     <button onclick="
       calculation += '6';
+      localStorage.setItem('calculation', calculation);
     ">      
       6
     </button>
     <button onclick="
       calculation += ' - ';
+      localStorage.setItem('calculation', calculation);
     ">
       -
     </button>
@@ -54,22 +62,26 @@
 
     <p>
       <button onclick="
-      calculation += '7';
+        calculation += '7';
+        localStorage.setItem('calculation', calculation);
     ">
       7
     </button>
     <button onclick="
       calculation += '8';
+      localStorage.setItem('calculation', calculation);
     ">      
       8
     </button>
     <button onclick="
       calculation += '9';
+      localStorage.setItem('calculation', calculation);
     ">      
       9
     </button>
     <button onclick="
       calculation += ' * ';
+      localStorage.setItem('calculation', calculation);
     ">
       *
     </button>
@@ -77,23 +89,27 @@
 
     <p>
       <button onclick="
-      calculation += '0';
+        calculation += '0';
+        localStorage.setItem('calculation', calculation);
     ">
       0
     </button>
     <button onclick="
-    calculation += '.';
+      calculation += '.';
+      localStorage.setItem('calculation', calculation);
     ">      
       .
     </button>
     <button onclick="
       calculation = eval(calculation);
       console.log(calculation);
+      localStorage.setItem('calculation', calculation);
     ">
       =
     </button>
     <button onclick="
       calculation += ' / ';
+      localStorage.setItem('calculation', calculation);
     ">
       /
     </button>
@@ -102,13 +118,16 @@
     <p>
       <button onclick="
         calculation = '';
+        localStorage.setItem('calculation', calculation);
       ">
         Clear 
       </button>
     </p>
 
     <script>
-      let calculation = '';
+      let calculation = localStorage.getItem('calculation') || '';
+
+      localStorage.setItem('calculation', calculation);
 
     </script>
 

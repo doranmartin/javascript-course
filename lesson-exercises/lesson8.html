@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lesson 8</title>
+  </head>
+  <body>
+
+
+    <script>
+      const basketball = {
+        price: 2095
+      };
+      console.log(basketball);
+
+      basketball.price += 500;
+      console.log(basketball);
+
+      basketball['delivery-time'] = '3 days';
+      console.log(basketball);
+
+      function comparePrice(product1, product2) {
+        if (product1.price < product2.price) {
+          return product1.name;
+        }
+        else {
+          return product2.name;
+        }
+      }
+
+      soccerBall = {
+        name: 'soccer ball',
+        price: 3000
+      };
+      tennisBall = {
+        name: 'tennis ball',
+        price: 2500
+      };
+
+      console.log(`The least expensive product is: ${comparePrice(soccerBall, tennisBall)}`);
+
+      function isSameProduct(product1, product2) {
+        if (product1.name === product2.name && product1.price === product2.price) {
+          return true;
+        }
+        return false;
+      }
+
+      tennisBall2 = {
+        name: 'tennis ball',
+        price: 2500
+      };
+
+      console.log(isSameProduct(soccerBall, tennisBall));
+      console.log(isSameProduct(tennisBall, tennisBall2));
+
+      console.log('Good Morning!'.toLowerCase());
+
+      console.log('test'.repeat(7));
+
+      
+
+
+    </script>
+  </body>
+</html>
