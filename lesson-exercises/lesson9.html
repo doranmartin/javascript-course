@@ -8,8 +8,53 @@
   <body>
     <button class="test9a">9a</button>
 
+    <button class="test9b">9b</button>
+    <p></p>
+
+    <button class="heads-button" onclick="
+      updateDisplay('heads');
+    ">heads</button>
+    <button class="tails-button" onclick="
+      updateDisplay('tails');
+    ">tails</button>
+    <p class="display"></p>
+
+    <input class="input" onkeydown="
+      handleNameKeyDown(event);
+    ">
+    <button class="submit-button" onclick="
+      updateInputPrintout();
+    ">Submit</button>
+    <p class="input-printout"></p>
+
+    <input class="input-element" onkeyup="
+      printOut(event);
+    ">
+    <p class="input-echo"></p>
+
     <script>
       console.log(document.querySelector('.test9a'));
+      document.querySelector('.test9b').innerHTML = '9b done!';
+
+      function updateDisplay(choice) {
+        document.querySelector('.display').innerHTML = `You chose: ${choice}`;
+      }
+
+      function updateInputPrintout() {
+        let input = document.querySelector('.input');
+        document.querySelector('.input-printout').innerHTML = `Your name is: ${input.value}`;
+      }
+
+      function handleNameKeyDown(event) {
+        if (event.key === 'Enter') {
+          updateInputPrintout();
+        }
+      }
+
+      function printOut(event) {
+        document.querySelector('.input-echo').innerHTML += event.key;
+      }
+
 
     </script>
   </body>
